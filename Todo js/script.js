@@ -1,62 +1,79 @@
+// Todo app in javascript
 const taskItems = [];
-//Step 1
-const addTask = () => {
-  {
-    const taskInput = document.getElementById('task');
-    const taskText = taskInput.value.trim();
-    if (taskText) {
-      const task = {
-        id: Math.floor(Math.random() * 100),
-        text: taskText,
-        isDone: false,
-        isDelete: false,
-      };
 
-      taskItems.push(task);
-      taskInput.classList.remove('input-error');
-      taskInput.value = '';
-      BuildTasks();
-    } else {
-      taskInput.classList.add('input-error');
-    }
+// get the Text from input and create new Object
+// then add the object to task Items
+// and call buildTaskList Function to create the List
+const getTaskTextHandler = () => {
+  const taskInput = document.getElementById('task');
+  const taskText = taskInput.value;
+  console.log(taskText);
+  if (taskText) {
+    const task = {
+      id: Math.random() * 100,
+      text: taskText,
+      isDone: false,
+      isDelete: false,
+    };
+
+    taskItems.push(task);
+    // old
+    // taskItems.push(taskText);
+
+    buildTaskList();
+  } else {
+    alert('Enter the Task');
   }
 };
 
-//Step 2
-const BuildTasks = () => {
+const buildTaskList = () => {
   const taskList = document.getElementById('task-list');
-  const tasks = taskItems.map((task) => {
-    const spanClass = task.isDone && task.isDelete ? 'delete' : task.isDone ? 'done' : task.isDelete ? 'delete' : '';
+  const domTask = taskItems.map((task) => {
+    console.log('task in map ', task);
+
+    const spanClass = task.isDelete ? 'delete' 
+    : task.isDelete && task.isDone ?
+     'delete' : task.isDone ? 'done' : '';
+
+     
+    //     let spanClass2 = '';
+    //     if (task.isDelete) {
+    //       spanClass2 = 'delete';
+    //     } else if (task.isDelete && task.isDone) {
+    //       spanClass2 = 'delete';
+    //     } else if (task.isDone) {
+    //       spanClass2 = 'done';
+    //     }
+
     return `<li id=${task.id}>
                 <div class="todo-item">
-                  <span class="${spanClass}">
-                  ${task.text}</span>
-                  <button class="btn-done" onclick="doneBtn(${task.id})">Done</button>
-                  <button class="btn-delete" onclick="deleteBtn(${task.id})">Delete</button>
+                        <span class="${spanClass}"> ${task.text}</span>
+                        <button class="btn-done" onclick="doneHandler(${task.id})">Done</button>
+                        <button class="btn-delete" onclick="deleteHandler(${task.id})">Delete</button>
                 </div>
-            </li>`;
+           </li>`;
   });
 
-  taskList.innerHTML = null;
-  taskList.innerHTML = tasks.join(' ');
+  console.log('dom list', domTask);
+  taskList.innerHTML = domTask.join(' ');
 };
 
-//Step 3
-const doneBtn = (id) => {
-  taskItems.forEach((item) => {
-    if (item.id == id) {
-      item.isDone = true;
+const doneHandler = (id) => {
+  taskItems.forEach((task) => {
+    if (task.id === id) {
+      task.isDone = true;
     }
   });
-  BuildTasks();
+
+  buildTaskList();
 };
 
-//Step 4
-const deleteBtn = (id) => {
-  taskItems.map((item) => {
-    if (item.id == id) {
-      item.isDelete = true;
+const deleteHandler = (id) => {
+  taskItems.forEach((task) => {
+    if (task.id === id) {
+      task.isDelete = true;
     }
   });
-  BuildTasks();
+
+  buildTaskList();
 };
