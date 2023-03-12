@@ -1,6 +1,11 @@
 # GSG-React-Bootcamp-Bethlehem
 
-## [you don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
+##  [You don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
+##  [Understanding Functional Components Vs. Class Components in React](https://www.scaler.com/topics/react/react-functional-vs-class-components/)
+##  [ES6 String template](https://www.javatpoint.com/es6-template-literals)
+## [Java Script Promise basics](https://javascript.info/promise-basics)
+## [async/await in javascript](https://www.freecodecamp.org/news/async-await-in-javascript/)
+## [The Async Await vedio](https://www.youtube.com/watch?v=vn3tm0quoqE)
 
 ## JavaScript
     1. object
