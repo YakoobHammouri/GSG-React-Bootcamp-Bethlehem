@@ -92,7 +92,7 @@ const[count , setCount] = useState(0)
 **count** : is the value contains cumulative count
 **setCount** : is the function using React to update the count value 
 
-example to useState : 
+[Example to useState](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/counter)
 
  ## what is the Props
  In React, **"props"** (short for "properties") are a mechanism for passing data and functionality from a parent component to its child components. A component can receive props as an argument to its function or class constructor.
