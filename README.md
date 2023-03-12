@@ -1,5 +1,7 @@
 # GSG-React-Bootcamp-Bethlehem
 
+## [you don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
+
 ## JavaScript
     1. object
     2. Arrow function
