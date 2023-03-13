@@ -120,3 +120,14 @@ const[count , setCount] = useState(0)
  In React, **"props"** (short for "properties") are a mechanism for passing data and functionality from a parent component to its child components. A component can receive props as an argument to its function or class constructor.
 
 **Props** are read-only, meaning that a component cannot modify its own props. Instead, **props** are used to configure a component's behavior and appearance based on the data passed in from its parent.
+
+
+# Life Cycle
+the ***Life Cycle*** in React is a method that gets called at different stages of a component's life. The lifecycle of a React component has three main phases:
+
+* Mounting: When an instance of a component is being created and inserted into the DOM.
+* Updating: When a component is being re-rendered, either as a result of changes in its props or state.
+* Unmounting: When a component is being removed from the DOM.
+During each of these phases, React calls a series of lifecycle methods, which allow you to perform certain actions and update the component's state.
+
+![lifecycle methods in react class component](https://user-images.githubusercontent.com/7718220/224830168-93087ee6-5a1c-4fb6-ac99-274c0d5390c0.png)
