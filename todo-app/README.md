@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+# Todo List Rect App
+in the simple ToDo app built using React. It consists of two components: ***TodoList*** and ***Task***.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The ***TodoList*** component is the main component that renders the entire ToDo list. It starts by initializing two states: taskText and taskList. The taskText state holds the input value for adding a new task, while the taskList state holds an array of all the tasks.
 
-## Available Scripts
+To load and store data from LocalStorage, two ***useEffect*** hooks are used. The first one is used to load the data from LocalStorage and set it in the taskList state. It runs only once on the initial render of the component. The second one is used to save any changes in the taskList state to LocalStorage every time the state changes.
 
-In the project directory, you can run:
+The ***handleTaskInput*** function is used to update the taskText state whenever the input value changes. The ***handleAddTask*** function is used to add a new task to the taskList state. It creates a new task object with a unique id and sets the isDone and isDelete properties to false. The new task is added to the taskList state by using the spread operator.
 
-### `npm start`
+The ***doneFun*** and ***deleteFun*** functions are used to mark a task as done or delete a task from the list, respectively. They take the id of the task as an argument and update the isDone or isDelete properties of the corresponding task in the taskList state using the map function.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The ***Task*** component is used to render each individual task item. It takes in the task, doneFun, and deleteFun ***props as arguments***. It uses these props to render the task text, Done and Delete buttons. The spanClass variable is used to set the class name of the task text based on its isDone and isDelete properties.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Overall, this code provides a simple example of how to use useState, useEffect, and props in a ToDo app. It also demonstrates how to store and retrieve data from LocalStorage.
