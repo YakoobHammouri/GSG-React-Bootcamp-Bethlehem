@@ -1,11 +1,25 @@
 # GSG-React-Bootcamp-Bethlehem
+React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and build complex UIs with ease. 
+whe will take Some of the key features of React include:
+* components
+* useState
+* props
+* components Life cycle `useEffect`
+* routing , Protect routing
+* useContext
 
-##  [You don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
-##  [Understanding Functional Components Vs. Class Components in React](https://www.scaler.com/topics/react/react-functional-vs-class-components/)
-##  [ES6 String template](https://www.javatpoint.com/es6-template-literals)
-## [Java Script Promise basics](https://javascript.info/promise-basics)
-## [async/await in javascript](https://www.freecodecamp.org/news/async-await-in-javascript/)
-## [The Async Await vedio](https://www.youtube.com/watch?v=vn3tm0quoqE)
+# Examples
+* [Todo List in js](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/Todo%20js)
+* [Counter in React](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/counter)
+* [Todo List in React ](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/todo-app)
+
+# Reading List
+* ###  [You don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
+* ###  [Understanding Functional Components Vs. Class Components in React](https://www.scaler.com/topics/react/react-functional-vs-class-components/)
+* ###  [ES6 String template](https://www.javatpoint.com/es6-template-literals)
+* ### [Java Script Promise basics](https://javascript.info/promise-basics)
+* ### [async/await in javascript](https://www.freecodecamp.org/news/async-await-in-javascript/)
+* ### [The Async Await vedio](https://www.youtube.com/watch?v=vn3tm0quoqE)
 
 ## JavaScript
     1. object
@@ -68,7 +82,8 @@ React is a popular JavaScript library that allows developers to build complex us
 * By using Diffing, React is able to update the DOM efficiently, and avoid making unnecessary changes. This results in faster performance and a better user experience.
 * It's important to note that Diffing can be an expensive process, especially if the Virtual DOM is large or complex. To optimize performance, React uses a number of strategies to minimize the amount of Diffing that needs to be done, such as using keys to identify which elements have changed, and batch updating changes to the DOM.
 
-     
+     ![183660810_160523102670424_6727267614249317342_n](https://user-images.githubusercontent.com/7718220/224822351-d0fa1877-081b-4265-808a-5950b74036e2.jpg)
+
 
 ##  Roles in Write React 
      1. The Component Must Start with Uppercase
@@ -105,3 +120,14 @@ const[count , setCount] = useState(0)
  In React, **"props"** (short for "properties") are a mechanism for passing data and functionality from a parent component to its child components. A component can receive props as an argument to its function or class constructor.
 
 **Props** are read-only, meaning that a component cannot modify its own props. Instead, **props** are used to configure a component's behavior and appearance based on the data passed in from its parent.
+
+
+# Life Cycle
+the ***Life Cycle*** in React is a method that gets called at different stages of a component's life. The lifecycle of a React component has three main phases:
+
+* Mounting: When an instance of a component is being created and inserted into the DOM.
+* Updating: When a component is being re-rendered, either as a result of changes in its props or state.
+* Unmounting: When a component is being removed from the DOM.
+During each of these phases, React calls a series of lifecycle methods, which allow you to perform certain actions and update the component's state.
+
+![lifecycle methods in react class component](https://user-images.githubusercontent.com/7718220/224830168-93087ee6-5a1c-4fb6-ac99-274c0d5390c0.png)
