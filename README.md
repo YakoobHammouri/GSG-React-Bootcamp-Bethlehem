@@ -1,5 +1,19 @@
 # GSG-React-Bootcamp-Bethlehem
+React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and build complex UIs with ease. 
+whe will take Some of the key features of React include:
+* Components
+* useState
+* Props
+* Components Life cycle `useEffect`
+* routing , Protect routing
+* useContext
 
+# Examples
+* [Todo List in js](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/Todo%20js)
+* [Counter in React](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/counter)
+* [Todo List in React ](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/todo-app)
+
+# Reading List
 ##  [You don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
 ##  [Understanding Functional Components Vs. Class Components in React](https://www.scaler.com/topics/react/react-functional-vs-class-components/)
 ##  [ES6 String template](https://www.javatpoint.com/es6-template-literals)
@@ -68,7 +82,8 @@ React is a popular JavaScript library that allows developers to build complex us
 * By using Diffing, React is able to update the DOM efficiently, and avoid making unnecessary changes. This results in faster performance and a better user experience.
 * It's important to note that Diffing can be an expensive process, especially if the Virtual DOM is large or complex. To optimize performance, React uses a number of strategies to minimize the amount of Diffing that needs to be done, such as using keys to identify which elements have changed, and batch updating changes to the DOM.
 
-     
+     ![183660810_160523102670424_6727267614249317342_n](https://user-images.githubusercontent.com/7718220/224822351-d0fa1877-081b-4265-808a-5950b74036e2.jpg)
+
 
 ##  Roles in Write React 
      1. The Component Must Start with Uppercase
