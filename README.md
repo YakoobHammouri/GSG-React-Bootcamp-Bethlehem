@@ -1,10 +1,10 @@
 # GSG-React-Bootcamp-Bethlehem
 React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and build complex UIs with ease. 
 whe will take Some of the key features of React include:
-* Components
+* components
 * useState
-* Props
-* Components Life cycle `useEffect`
+* props
+* components Life cycle `useEffect`
 * routing , Protect routing
 * useContext
 
