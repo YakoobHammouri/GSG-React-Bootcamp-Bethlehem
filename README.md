@@ -131,3 +131,44 @@ the ***Life Cycle*** in React is a method that gets called at different stages o
 During each of these phases, React calls a series of lifecycle methods, which allow you to perform certain actions and update the component's state.
 
 ![lifecycle methods in react class component](https://user-images.githubusercontent.com/7718220/224830168-93087ee6-5a1c-4fb6-ac99-274c0d5390c0.png)
+
+
+# useEffect
+The hook used to manage the lifecycle of a component in a React function is called ***useEffect()***. 
+
+The ***useEffect()*** hook allows you to run side effects, such as fetching data from an API or updating the DOM, after every render or only when certain dependencies change.
+
+By using the ***useEffect()*** hook, you can perform actions during different stages of the component lifecycle, such as when the component is first mounted, when it updates, or when it unmounts. You can also clean up any resources used by the component when it unmounts.
+
+To use the ***useEffect()*** hook, you call it inside the component function, passing in a function that contains the code you want to run, as well as an array of dependencies that determines when the code should run.
+
+
+### useEffect cases
+
+*  run on every render of the component , to useEffect in every render we remove the dependencies List 
+```
+  useEffect(() => {
+    // code to run after every render
+    // return a function to clean up after unmounting
+  });
+
+```
+
+* by add empty dependencies List  `[]` the effect will only run once, when the component mounts, and will not run again for subsequent renders.
+
+```
+  useEffect(() => {
+    // code to run just on mount for one time
+  }, []);
+
+```
+
+* the effect will run when any of the dependencies in the list change.
+
+```
+  useEffect(() => {
+    // code to run when any of the dependencies in the list change
+  }, [state1 , state2 , state3,....]);
+
+```
+
