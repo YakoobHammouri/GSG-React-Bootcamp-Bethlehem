@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# GSG Shop
+In this example, we are building an e-commerce store using React. We will be working with the following concepts:
+* useState
+* useEffect
+* Props
+* get Data from API `https://fakestoreapi.com/`
+* Router and Params:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Params in React Router allow you to define dynamic segments in a URL that can be used to retrieve data from a server or database. For example, if you have a route for a product page like /products/:id, you can use the :id parameter to fetch data for the specific product.
 
-## Available Scripts
+* Context for Login:
+Context is a feature in React that allows you to pass data down the component tree without having to pass props down through each level. You can create a context for login to store user authentication information and protect certain routes that require authentication.
 
-In the project directory, you can run:
 
-### `npm start`
+# Todo List
+1. in Home Page do step 1 and 2
+2. in ProductCard Component do step 3
+3. in index.js do step 4 and 5 , use Terminal to install react-router-dom from npm.
+4. in App.js do step 6 and 7
+5. in navBar do step 8 
+6. in ProductCard Component do step 9
+7. in ProductDetails do step 10 , 11 , 12
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# steps
+   * Step 1 : get all product from `https://fakestoreapi.com/`
+   * Step 2 : using ProductCard to display all products by using map
+   * step 3 : using props to  get product data
+   * step 4 : install react-router-dom from npm
+   * step 5: using React Router's `BrowserRouter` component to wrap around the main App component in a React application.
+   * step 6 : create `AboutPage` in page folder to using in route
+   * step 7 : define Routes , for home page  , about page , product with `:id`
+   * step 8 : cerate  Link for pages
+   * step 9 : cerate  Link for product details Pages with id of product
+   * step 10 : using useParams to get id for product
+   * step 11 : get  product by id `Get a single product` from `https://fakestoreapi.com/`
+   * step 12 : build Product Details Page
