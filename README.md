@@ -12,6 +12,7 @@ whe will take Some of the key features of React include:
 * [Todo List in js](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/Todo%20js)
 * [Counter in React](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/counter)
 * [Todo List in React ](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/todo-app)
+* [gsg-shop](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/gsg-shop)
 
 # Reading List
 * ###  [You don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
