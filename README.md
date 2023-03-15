@@ -12,6 +12,7 @@ whe will take Some of the key features of React include:
 * [Todo List in js](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/Todo%20js)
 * [Counter in React](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/counter)
 * [Todo List in React ](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/todo-app)
+* [gsg-shop](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/tree/main/gsg-shop)
 
 # Reading List
 * ###  [You don't know java script book](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Bethlehem/files/10950231/you-don-t-know-js.pdf)
@@ -19,7 +20,10 @@ whe will take Some of the key features of React include:
 * ###  [ES6 String template](https://www.javatpoint.com/es6-template-literals)
 * ### [Java Script Promise basics](https://javascript.info/promise-basics)
 * ### [async/await in javascript](https://www.freecodecamp.org/news/async-await-in-javascript/)
+
+# Video list
 * ### [The Async Await vedio](https://www.youtube.com/watch?v=vn3tm0quoqE)
+* ### [10 React Hooks Explained and Build your own from Scratch](https://youtu.be/TNhaISOUy6Q?t=26)
 
 ## JavaScript
     1. object
