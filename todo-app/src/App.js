@@ -1,10 +1,11 @@
 import logo from './logo.svg';
+import TodoList from './components/todoList';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     
+      <TodoList />
     </div>
   );
 }
