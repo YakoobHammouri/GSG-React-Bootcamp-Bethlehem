@@ -1,18 +1,26 @@
 import React from 'react';
-
 const Task = (props) => {
-  console.log('props', props);
-  const { task, doneFun } = props;
+  const { task, doneFun, deleteFun } = props;
 
-  const spanCalss = task.isDone ? 'done' : '';
+  const handleDone = (id) => {
+    doneFun(id);
+  };
+
+  const handleDelete = (id) => {
+    deleteFun(id);
+  };
+
+  const spanClass = task.isDone && task.isDelete ? 'delete' : task.isDone ? 'done' : task.isDelete ? 'delete' : '';
   return (
-    <li>
+    <li id={task.id}>
       <div className="todo-item">
-        <span className={spanCalss}>{task.text}</span>
-        <button className="btn-done" onClick={(e) => doneFun(task.id)}>
+        <span className={spanClass}>{task.text}</span>
+        <button className="btn-done" onClick={(event) => handleDone(task.id)}>
           Done
         </button>
-        <button className="btn-delete">Delete</button>
+        <button className="btn-delete" onClick={(event) => handleDelete(task.id)}>
+          Delete
+        </button>
       </div>
     </li>
   );

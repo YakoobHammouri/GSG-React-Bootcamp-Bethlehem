@@ -1,49 +1,70 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Task from './task';
+
 const TodoList = () => {
   const [taskText, setTaskText] = useState('');
-  const [taskItems, setTaskItems] = useState([]);
+  const [taskList, setTaskList] = useState([]);
+  // load data from LocalStorage
+  useEffect(() => {
+    const temp = JSON.parse(localStorage.getItem('taskList'));
+    if (temp) {
+      setTaskList(temp);
+    }
+  }, []);
 
-  const taskInputHandler = (e) => {
-    setTaskText(e.target.value);
+  useEffect(() => {
+    localStorage.setItem('taskList', JSON.stringify(taskList));
+  }, [taskList]);
+
+  const handleTaskInput = (event) => {
+    setTaskText(event.target.value);
   };
 
-  const addTaskHandler = (e) => {
+  const handleAddTask = () => {
     const task = {
-      id: Math.random() * 100,
+      id: Math.floor(Math.random() * 100),
       text: taskText,
       isDone: false,
       isDelete: false,
     };
-
-    const newTaskItems = [...taskItems, task];
-    setTaskItems(newTaskItems);
+    setTaskList([...taskList, task]);
+    setTaskText('');
   };
 
   const doneFun = (id) => {
-    console.log('id in ete', id.target);
-    const newTaskItems = taskItems.map((task) => {
+    const newTaskList = taskList.map((task) => {
       if (task.id === id) {
         task.isDone = true;
       }
       return task;
     });
 
-    setTaskItems(newTaskItems);
+    setTaskList(newTaskList);
+  };
+
+  const deleteFun = (id) => {
+    const newTaskList = taskList.map((task) => {
+      if (task.id === id) {
+        task.isDelete = true;
+      }
+      return task;
+    });
+
+    setTaskList(newTaskList);
   };
 
   return (
     <div id="app">
       <h1>Todo App</h1>
       <div className="add-task">
-        <input type="text" id="task" placeholder="Add a new task" onChange={taskInputHandler} />
-        <button id="add-task" onClick={addTaskHandler}>
+        <input type="text" id="task" value={taskText} placeholder="Add a new task" onChange={handleTaskInput} />
+        <button id="add-task" onClick={handleAddTask}>
           Add
         </button>
       </div>
       <ul id="task-list">
-        {taskItems.map((task) => {
-          return <Task key={task.id} task={task} doneFun={doneFun} />;
+        {taskList?.map((item) => {
+          return <Task task={item} doneFun={doneFun} deleteFun={deleteFun} />;
         })}
       </ul>
     </div>

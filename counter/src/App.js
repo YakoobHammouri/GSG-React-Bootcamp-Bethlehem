@@ -1,69 +1,42 @@
 import logo from './logo.svg';
-import { useState, useEffect } from 'react';
 import './App.css';
+import { useEffect, useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(1);
+const App = () => {
+  const [counter, setCounter] = useState(0);
 
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {}, []);
-
-  // 1- every time,
+  // run on every render of the component
   useEffect(() => {
-    // console.log(`use Effect in every time ${count}`);
+    console.log('use Effect 1 run in every render ');
   });
 
-  //2- in component mounting
+  // effect will only run once, when the component mounts,
+  // and will not run again for subsequent renders.
   useEffect(() => {
-    console.log('use Effect in Component mounting');
-    setTimeout(() => {
-      setCount(5);
-    }, 3 * 1000);
+    console.log('use Effect 2 run just in component mounts');
   }, []);
 
-  // 3- in update
+  // the effect will run when any of the dependencies in the list change.
   useEffect(() => {
-    if (count > 20) {
-      console.log('use Effect in update count');
-      setTotal(count * 2);
-      //alert(`The Count is ${count} `);
+    console.log('run when the counter changed');
+    if (counter > 20) {
+      alert(`good the counter is ${counter} `);
     }
-  }, [count]);
+  }, [counter]);
 
-  useEffect(() => {
-    if (total > 50) {
-      alert(`The Total is ${total}`);
-    }
-  }, [total]);
-
-  const countHandler = (newVal) => {
-    if (count > 0) {
-      setCount(count + newVal);
-    }
+  const updateCounter = (newCounter) => {
+    setCounter(counter + newCounter);
   };
-
-  //(e) => countHandler(1)
-  const eventHandler = (e) => {
-    return countHandler(1);
-  };
-
-  //(e) => countHandler(1)
-  function eventHandler2(e) {
-    return countHandler(1);
-  }
 
   return (
     <div className="App">
-      <div>
-        The Total :<h1>{total}</h1>
+      <div className="counter-div">
+        <button onClick={(e) => updateCounter(-1)}>-</button>
+        <span>{counter}</span>
+        <button onClick={(e) => updateCounter(1)}>+</button>
       </div>
-      <button onClick={(e) => countHandler(1)}>+</button>
-      <span>{count}</span>
-      {/* <button onClick={(e) => setCount(count - 1)}>-</button> */}
-      <button onClick={(e) => countHandler(-1)}>-</button>
     </div>
   );
-}
+};
 
 export default App;
